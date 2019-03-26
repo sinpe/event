@@ -75,14 +75,14 @@ class EventManager implements EventManagerInterface
     /**
      * {@inheritDoc}
      */
-    public function trigger($event, $target = null, array $params = [])
+    public function trigger($event)
     {
         $name = $event;
 
         if ($event instanceof EventInterface) {
             $name = $event->getName();
         } else {
-            $event = new Event($name, $target, $params);
+            $event = new Event($name);
         }
 
         if (!isset($this->events[$name])) {
@@ -111,9 +111,9 @@ class EventManager implements EventManagerInterface
     /**
      * trigger别名
      */
-    public function fire($event, $target = null, array $params = [])
+    public function fire($event)
     {
-        return $this->trigger($event, $target, $params);
+        return $this->trigger($event);
     }
 
     /**
