@@ -15,18 +15,4 @@ interface EventInterface
      * @return string
      */
     public function getName();
-
-    /**
-     * Indicate whether or not to stop propagating this event
-     *
-     * @param bool $flag
-     */
-    public function stopPropagation($flag);
-
-    /**
-     * Has this event indicated event propagation should stop?
-     *
-     * @return bool
-     */
-    public function isPropagationStopped();
 }

@@ -10,11 +10,6 @@ class Event implements EventInterface
     protected $name = null;
 
     /**
-     * @var bool
-     */
-    protected $isPropagationStopped = false;
-
-    /**
      * {@inheritDoc}
      */
     public function getName()
@@ -29,19 +24,4 @@ class Event implements EventInterface
         return $this->name;
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    public function stopPropagation($flag)
-    {
-        $this->isPropagationStopped = (bool)$flag;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function isPropagationStopped()
-    {
-        return $this->isPropagationStopped;
-    }
 }

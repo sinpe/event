@@ -18,7 +18,7 @@ interface EventManagerInterface
      *
      * @return bool true on success false on failure
      */
-    public function attach($event, $callback, $priority = 0);
+    public function addListener($event, $callback, $priority = 0);
 
     /**
      * Detaches a listener from an event
@@ -28,7 +28,7 @@ interface EventManagerInterface
      *
      * @return bool true on success false on failure
      */
-    public function detach($event, $callback);
+    public function removeListener($event, $callback);
 
     /**
      * Clear all listeners for a given event
@@ -43,10 +43,8 @@ interface EventManagerInterface
      * Can accept an EventInterface or will create one if not passed
      *
      * @param string|EventInterface $event
-     * @param null|object|string $target
-     * @param mixed[] $params
      *
      * @return mixed
      */
-    public function trigger($event, $target = null, array $params = []);
+    public function dispatch($event);
 }

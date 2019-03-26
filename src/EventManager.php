@@ -12,7 +12,7 @@ class EventManager implements EventManagerInterface
     /**
      * {@inheritDoc}
      */
-    public function attach($event, $callback, $priority = 999)
+    public function addListener($event, $callback, $priority = 999)
     {
         $events = [];
         if (isset($this->events[$event])) {
@@ -39,7 +39,7 @@ class EventManager implements EventManagerInterface
     /**
      * {@inheritDoc}
      */
-    public function detach($event, $callback)
+    public function removeListener($event, $callback)
     {
         if (!isset($this->events[$event])) {
             return false;
@@ -75,7 +75,7 @@ class EventManager implements EventManagerInterface
     /**
      * {@inheritDoc}
      */
-    public function trigger($event)
+    public function dispatch($event)
     {
         $name = $event;
 
@@ -97,8 +97,10 @@ class EventManager implements EventManagerInterface
         foreach ($names as $name) {
             if (isset($this->events[$name])) {
                 foreach ($this->events[$name] as $data) {
-                    $result = $data['callback']($event, $result);
-                    if ($event->isPropagationStopped()) {
+                    // 
+                    $result = $data['callback']($event, $this);
+
+                    if ($result === false) {
                         break;
                     }
                 }
@@ -113,7 +115,7 @@ class EventManager implements EventManagerInterface
      */
     public function fire($event)
     {
-        return $this->trigger($event);
+        return $this->dispatch($event);
     }
 
     /**
