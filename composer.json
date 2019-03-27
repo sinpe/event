@@ -19,6 +19,5 @@
         "psr-4": {
             "Sinpe\\Event\\": "src/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
