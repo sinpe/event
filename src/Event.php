@@ -39,4 +39,7 @@ class Event implements StoppableEventInterface
         $this->propagationStopped = true;
     }
 
+    // __sleep
+    // __wakeup
+
 }
