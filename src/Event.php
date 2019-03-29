@@ -22,7 +22,7 @@ class Event implements StoppableEventInterface
     /**
      * {@inheritDoc}
      */
-    public function isPropagationStopped()
+    public function isPropagationStopped():bool
     {
         return $this->propagationStopped;
     }
