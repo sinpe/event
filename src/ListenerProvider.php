@@ -33,7 +33,7 @@ class ListenerProvider implements ListenerProviderInterface
     { 
         $eventType = get_class($event);
 
-        $listeners = $this->listeners[$eventType];
+        $listeners = $this->listeners[$eventType] ?? [];
 
         if (!isset($this->sorted[$eventType])) {
             usort($listeners, function ($a, $b) {
