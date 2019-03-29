@@ -1,9 +1,9 @@
-事件管理器
-=======================================
+Event Dispatcher
+---
 
 
 安装
--------
+---
 
 composer:
 
@@ -11,10 +11,10 @@ composer:
 composer require long/event
 ```
 
-PHP 7.0 or newer.
+PHP 7.2 or newer.
 
 用例
------
+---
 
 ### 例子
 
