@@ -1,23 +1,25 @@
 {
-    "name": "long/event",
-    "description": "PSR-14 Event implementation.",
-    "homepage": "https://github.com/sinpe/event",
-    "type": "library",
-    "license": "MIT",
-    "authors": [{
-        "name": "Sinpe",
-        "email": "18222544@gmail.com"
-    }],
-    "require": {
-        "php": ">=7.2.0",
-        "psr/event-dispatcher": "^1.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^7.3"
-    },
-    "autoload": {
-        "psr-4": {
-            "Sinpe\\Event\\": "src/"
-        }
+  "name": "long/event",
+  "description": "PSR-14 Event implementation.",
+  "homepage": "https://github.com/sinpe/event",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sinpe",
+      "email": "18222544@gmail.com"
     }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "psr/event-dispatcher": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sinpe\\Event\\": "src/"
+    }
+  }
 }
