@@ -58,4 +58,21 @@ class EventDispatcher implements EventDispatcherInterface
 
         return $event;
     }
+
+    /**
+     * __call
+     *
+     * @param string $name
+     * @param array $arguments
+     * @return void
+     */
+    public function __call($name, $arguments)
+    {
+        if (method_exists($this->listenerProvider, $name)) {
+            return call_user_func_array([$this->listenerProvider, $name], $arguments);
+        }
+
+        throw new \Exception(sprintf('%s:%s not exists.', get_class($this), $name));
+    }
+    
 }
