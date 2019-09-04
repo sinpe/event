@@ -1,5 +1,5 @@
 <?php
- /*
+/*
  * This file is part of the long/event package.
  *
  * (c) Sinpe <support@sinpe.com>
@@ -7,8 +7,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
-declare(strict_types=1);
 
 namespace Sinpe\Event;
 
