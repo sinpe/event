@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Haomiao\Lib\Event;
+namespace Sinpe\Event;
 
 /**
  * Mapper from an event to the listeners that are applicable to that event.

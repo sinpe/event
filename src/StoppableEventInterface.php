@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Haomiao\Lib\Event;
+namespace Sinpe\Event;
 
 /**
  * An Event whose processing may be interrupted when the event has been handled.

@@ -25,7 +25,7 @@ class Subject implements \SplSubject
     }
 
     /**
-     * Undocumented function
+     * attach
      *
      * @param \SplObserver $observer
      * @return void
@@ -36,7 +36,7 @@ class Subject implements \SplSubject
     }
 
     /**
-     * Undocumented function
+     * detach
      *
      * @param \SplObserver $observer
      * @return void
@@ -47,7 +47,7 @@ class Subject implements \SplSubject
     }
 
     /**
-     * Undocumented function
+     * notify
      *
      * @return void
      */
